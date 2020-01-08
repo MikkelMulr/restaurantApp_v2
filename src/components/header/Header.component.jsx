@@ -8,6 +8,7 @@ function Header() {
 			<Link to='/'>
 				<h2>Family of Restaurants</h2>
 			</Link>
+			<i class='fas fa-bars' />
 		</div>
 	);
 }
