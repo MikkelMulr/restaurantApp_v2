@@ -1,0 +1,29 @@
+.Menu {
+  width: 85vw;
+  height: calc(100vh - 60px);
+  background-color: #333;
+  color: #fff;
+  animation: reveal 1.2s linear 0.25s;
+}
+
+.hidden {
+  display: none;
+  opacity: 0;
+}
+
+.showMe {
+  display: 1;
+  opacity: 1;
+}
+
+@keyframes reveal {
+  0% {
+    opacity: 0;
+    transform: translateX(-500px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

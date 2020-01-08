@@ -4,6 +4,7 @@ import './Home.style.scss';
 import Banner from '../../components/banner/Banner.component';
 
 export class Home extends Component {
+	// Call restaurant data from external json file and pass in along with props to Link
 	render() {
 		return (
 			<div className='Home'>
