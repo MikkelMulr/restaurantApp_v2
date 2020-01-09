@@ -3,7 +3,7 @@ import './Menu.style.scss';
 
 function Menu({ menuState }) {
   return (
-    <div className={`Menu ${menuState ? 'showMe' : 'hidden'}`}>
+    <div className={`Menu ${menuState ? 'unhidden' : 'hidden'}`}>
       <h2>Menu</h2>
     </div>
   )

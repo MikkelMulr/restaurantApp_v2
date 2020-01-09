@@ -1,0 +1,96 @@
+{
+  "restaurants": [{
+      "name": "Five Vines",
+      "about": "Small description about the restaurant and its history",
+      "style": "Fine Dining",
+      "menu": [{
+          "name": "dish1",
+          "price": 9.99,
+          "about": "short text about the menu item and its ingredients"
+        },
+        {
+          "name": "dish2",
+          "price": 9.99,
+          "about": "short text about the menu item and its ingredients"
+        },
+        {
+          "name": "dish3",
+          "price": 9.99,
+          "about": "short text about the menu item and its ingredients"
+        },
+        {
+          "name": "dish4",
+          "price": 9.99,
+          "about": "short text about the menu item and its ingredients"
+        },
+        {
+          "name": "dish5",
+          "price": 9.99,
+          "about": "short text about the menu item and its ingredients"
+        }
+      ]
+    },
+    {
+      "name": "The Chili Pit",
+      "about": "Small description about the restaurant and its history",
+      "style": "Casual Dining",
+      "menu": [{
+          "name": "dish1",
+          "price": 9.99,
+          "about": "short text about the menu item and its ingredients"
+        },
+        {
+          "name": "dish2",
+          "price": 9.99,
+          "about": "short text about the menu item and its ingredients"
+        },
+        {
+          "name": "dish3",
+          "price": 9.99,
+          "about": "short text about the menu item and its ingredients"
+        },
+        {
+          "name": "dish4",
+          "price": 9.99,
+          "about": "short text about the menu item and its ingredients"
+        },
+        {
+          "name": "dish5",
+          "price": 9.99,
+          "about": "short text about the menu item and its ingredients"
+        }
+      ]
+    },
+    {
+      "name": "Civche",
+      "about": "Small description about the restaurant and its history",
+      "style": "Fine Dining",
+      "menu": [{
+          "name": "dish1",
+          "price": 9.99,
+          "about": "short text about the menu item and its ingredients"
+        },
+        {
+          "name": "dish2",
+          "price": 9.99,
+          "about": "short text about the menu item and its ingredients"
+        },
+        {
+          "name": "dish3",
+          "price": 9.99,
+          "about": "short text about the menu item and its ingredients"
+        },
+        {
+          "name": "dish4",
+          "price": 9.99,
+          "about": "short text about the menu item and its ingredients"
+        },
+        {
+          "name": "dish5",
+          "price": 9.99,
+          "about": "short text about the menu item and its ingredients"
+        }
+      ]
+    }
+  ]
+}

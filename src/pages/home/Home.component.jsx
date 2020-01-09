@@ -4,20 +4,41 @@ import './Home.style.scss';
 import Banner from '../../components/banner/Banner.component';
 
 export class Home extends Component {
-	// Call restaurant data from external json file and pass in along with props to Link
+	constructor(props) {
+		super(props);
+		this.state = {
+			restData: {},
+			restaurantBanners: []
+		}
+	}
+
+	componentDidMount() {
+		// this.setState({ restData: this.props.restData });
+		setTimeout(() => {
+			this.createResturantBanner();
+
+		}, 500);
+	}
+
+	createResturantBanner = () => {
+		let rests = this.props.restData.restaurants.map((rest, index) =>
+			(
+				<Link to={{ pathname: '/restaurant', state: { title: rest.name, about: rest.about, style: rest.style, menu: rest.menu } }} key={index}>
+					<Banner title={rest.name} />
+				</Link>
+			)
+		);
+
+		this.setState({ restaurantBanners: rests });
+
+	}
 	render() {
+		console.log(this.props.restData.restaurants);
 		return (
 			<div className='Home'>
 				<div className='Home--banners'>
-					<Link to={{ pathname: '/restaurant', state: { title: "El Grande" } }}>
-						<Banner title='El Grande' />
-					</Link>
-					<Link to={{ pathname: '/restaurant', state: { title: "The Chili House" } }}>
-						<Banner title='The Chili House' />
-					</Link>
-					<Link to={{ pathname: '/restaurant', state: { title: "Five Vines" } }}>
-						<Banner title='Five Vines' />
-					</Link>
+					{/* Print out the banners */}
+					{this.state.restaurantBanners}
 				</div>
 			</div>
 		);

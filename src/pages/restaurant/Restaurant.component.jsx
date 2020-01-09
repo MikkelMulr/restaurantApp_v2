@@ -11,6 +11,7 @@ class Restaurant extends Component {
 	}
 
 	render() {
+		// console.log(this.props)
 		// Restaurant component will be template that accepts props to populate it's content for one of three different restaurants
 		return (
 			<div className='Restaurant'>

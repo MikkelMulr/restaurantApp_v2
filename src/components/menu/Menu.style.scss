@@ -3,7 +3,6 @@
   height: calc(100vh - 60px);
   background-color: #333;
   color: #fff;
-  animation: reveal 1.2s linear 0.25s;
 }
 
 .hidden {
@@ -11,10 +10,12 @@
   opacity: 0;
 }
 
-.showMe {
-  display: 1;
-  opacity: 1;
+.unhidden {
+  animation: reveal 0.5s linear;
+  transform: translateX(0);
+  transition: all 0.5s linear;
 }
+
 
 @keyframes reveal {
   0% {
