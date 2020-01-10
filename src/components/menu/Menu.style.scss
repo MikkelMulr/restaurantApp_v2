@@ -3,6 +3,10 @@
   height: calc(100vh - 60px);
   background-color: #333;
   color: #fff;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  z-index: 9000;
 }
 
 .hidden {

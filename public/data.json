@@ -1,5 +1,6 @@
 {
   "restaurants": [{
+      "id": 0,
       "name": "Five Vines",
       "about": "Small description about the restaurant and its history",
       "style": "Fine Dining",
@@ -31,6 +32,7 @@
       ]
     },
     {
+      "id": 1,
       "name": "The Chili Pit",
       "about": "Small description about the restaurant and its history",
       "style": "Casual Dining",
@@ -62,6 +64,7 @@
       ]
     },
     {
+      "id": 2,
       "name": "Civche",
       "about": "Small description about the restaurant and its history",
       "style": "Fine Dining",

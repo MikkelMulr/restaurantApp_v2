@@ -7,24 +7,24 @@ export class Home extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			restData: {},
 			restaurantBanners: []
 		}
 	}
 
 	componentDidMount() {
-		// this.setState({ restData: this.props.restData });
 		setTimeout(() => {
 			this.createResturantBanner();
 
 		}, 500);
 	}
 
+	// PASS REST ID TO UPDATECURRENT FUNCTION SO THAT APP JS KNOWS WHAT DATA TO RENDER OUT
+
 	createResturantBanner = () => {
-		let rests = this.props.restData.restaurants.map((rest, index) =>
+		let rests = this.props.restData.map((rest, index) =>
 			(
-				<Link to={{ pathname: '/restaurant', state: { title: rest.name, about: rest.about, style: rest.style, menu: rest.menu } }} key={index}>
-					<Banner title={rest.name} />
+				<Link to={{ pathname: '/restaurant', state: {} }} key={index}>
+					<Banner title={rest.name} bannerId={rest.id} updateCurrentRest={this.props.updateCurrentRestaurant} />
 				</Link>
 			)
 		);
@@ -33,7 +33,7 @@ export class Home extends Component {
 
 	}
 	render() {
-		console.log(this.props.restData.restaurants);
+		// console.log(this.props.restData.restaurants);
 		return (
 			<div className='Home'>
 				<div className='Home--banners'>

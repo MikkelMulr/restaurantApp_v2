@@ -5,8 +5,29 @@
 	border-radius: 0 8px 8px 0;
 	box-shadow: 4px 4px 17px 0px rgba(0, 0, 0, 0.75);
 	transition: 0.3s ease-out 0.15s;
+	animation: slideIn 0.8s ease-out;
 
 	&:active {
 		transform: scale(1.05) translateX(8px);
+	}
+
+	&--02 {
+		animation-duration: 1.2s;
+	}
+
+	&--03 {
+		animation-duration: 1.6s;
+	}
+}
+
+@keyframes slideIn {
+	0% {
+		opacity: 0;
+		transform: translateX(-400px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateX(0);
 	}
 }

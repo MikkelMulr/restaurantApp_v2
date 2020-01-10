@@ -13,30 +13,36 @@ class App extends Component {
 
 		this.state = {
 			menuView: false,
-			restData: {}
+			restData: {},
+			currentRest: ''
 		}
 	}
 
 	componentDidMount() {
 		axios.get(`./data.json`)
 			.then(res => {
-				const restData = res.data;
+				const restData = res.data.restaurants;
 				this.setState({ restData });
 			});
+	}
+
+	updateCurrentRestaurant = (id) => {
+		this.setState({ currentRest: id });
+		console.log(id);
 	}
 
 	handleMenuState = () => {
 		this.setState({ menuView: !this.state.menuView });
 	}
 	render() {
-		console.log(this.state.restData);
+		console.log(this.state.restData[this.state.currentRest] ? this.state.restData[this.state.currentRest].name : 'nothing');
 		return (
 			<div className='App' >
-				<Header handleMenuState={this.handleMenuState} />
+				<Header handleMenuState={this.handleMenuState} menuState={this.state.menuView} />
 				<Menu menuState={this.state.menuView} />
 				<Switch>
-					<Route exact path='/' render={(props) => <Home {...props} restData={this.state.restData} />} />
-					<Route exact path='/restaurant' Component={Restaurant} />
+					<Route exact path='/' render={(props) => <Home {...props} restData={this.state.restData} updateCurrentRestaurant={this.updateCurrentRestaurant} />} />
+					<Route exact path='/restaurant' Render={(props) => <Restaurant {...props} current={this.state.currentRest} restData={this.state.restData[this.state.currentRest]} />} />
 				</Switch>
 			</div>
 		);
