@@ -7,4 +7,18 @@
   h2 {
     color: #fff;
   }
+
+  &--menuList {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .MenuItem {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
 }
