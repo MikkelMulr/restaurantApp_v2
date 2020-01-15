@@ -27,7 +27,7 @@ class Restaurant extends Component {
 			});
 		} catch (error) {
 			console.log(error);
-			this.setState({ error: 'Uh something went wrong!', occured: true });
+			this.setState({ error: 'Uh oh, something went wrong!', occured: true });
 		}
 	};
 
@@ -47,9 +47,9 @@ class Restaurant extends Component {
 	}
 
 	createMenuItems = () => {
-		let menu = this.state.menu.map((item) => {
+		let menu = this.state.menu.map((item, index) => {
 			return (
-				<div className='MenuItem'>
+				<div className='MenuItem' key={index}>
 					<h3 className='MenuItem--title'>
 						{item.name} - <span className='MenuItem--price'>{item.price}</span>
 					</h3>

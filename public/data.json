@@ -5,9 +5,9 @@
       "about": "Small description about the restaurant and its history",
       "style": "Fine Dining",
       "menu": [{
-          "name": "dish1",
-          "price": 9.99,
-          "about": "short text about the menu item and its ingredients"
+          "name": "Fish and Chips",
+          "price": 12.99,
+          "about": "Beer battered fresh halibut with your choice of sides"
         },
         {
           "name": "dish2",
